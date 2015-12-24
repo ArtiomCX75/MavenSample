@@ -22,7 +22,7 @@ public class Frontend extends HttpServlet{
         Map<String, Object> pageVariables = createPageVariablesMap(request);
         String message = request.getParameter("message");
         response.setContentType("text/html;charset=utf-8");
-        if (message ==null || message.isEmpty()) {
+        if (message == null || message.isEmpty()) {
             response.setStatus(HttpServletResponse.SC_FORBIDDEN);
         }
         else {
